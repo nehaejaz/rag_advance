@@ -10,7 +10,7 @@ TOKENIZERS={
     "command-r": "https://storage.googleapis.com/cohere-public/tokenizers/command-r.json",
     "command-r-plus": "https://storage.googleapis.com/cohere-public/tokenizers/command-r-plus.json",
 }
-def display_source(symbol):
+def display_source(symbol) -> None:
     """
     Display the source code of a given symbol using rich's syntax highlighting
     
@@ -33,7 +33,7 @@ def display_source(symbol):
     console = Console()
     console.print(syntax)
     
-def get_special_tokens_set(tokenizer_url=TOKENIZERS["command-r"]):
+def get_special_tokens_set(tokenizer_url=TOKENIZERS["command-r"]) -> set:
     """
     Fetches the special tokens set from the given Tokenizer url
     
